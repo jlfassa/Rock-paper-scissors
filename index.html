@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Changed language to English -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Neon Clash</title> <!-- Updated Title -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons (Example) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+
+        <div class="score-board">
+            <div class="score player-score">
+                <p>YOU</p>
+                <span id="user-score">0</span>
+            </div>
+            <div class="score computer-score">
+                <p>CPU</p>
+                <span id="computer-score">0</span>
+            </div>
+        </div>
+
+        <p class="instruction-text">Make your choice:</p>
+        <div class="choices">
+            <!-- Added data-choice attribute and icon span -->
+            <button class="choice" id="rock" data-choice="rock">
+                <span class="icon"><i class="fa-regular fa-hand-back-fist"></i></span>
+                <span class="text">Rock</span>
+            </button>
+            <button class="choice" id="paper" data-choice="paper">
+                <span class="icon"><i class="fa-regular fa-hand"></i></span>
+                <span class="text">Paper</span>
+            </button>
+            <button class="choice" id="scissors" data-choice="scissors">
+                <span class="icon"><i class="fa-regular fa-hand-scissors"></i></span>
+                <span class="text">Scissors</span>
+            </button>
+        </div>
+
+        <div class="results-display">
+             <!-- Display choices visually -->
+            <div class="choices-made">
+                <div class="choice-display user">
+                    <p>Your Choice:</p>
+                    <span id="user-choice-display">-</span> <!-- Will show icon/text -->
+                </div>
+                 <div class="choice-display computer">
+                    <p>CPU Choice:</p>
+                    <span id="computer-choice-display">-</span> <!-- Will show icon/text -->
+                </div>
+            </div>
+            <!-- Result message -->
+            <p id="result-message" class="result-message">Let's Play!</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
